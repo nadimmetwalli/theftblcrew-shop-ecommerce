@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',  // Make sure JIT is enabled
+  mode: 'jit',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,8 +9,10 @@ module.exports = {
     extend: {
       colors: {
         'custom-red': '#ea2e0e',
-      },
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require("@designbycode/tailwindcss-text-stroke") // Only this plugin
+  ],
 };
