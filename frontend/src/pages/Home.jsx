@@ -63,7 +63,7 @@ const placeholderProducts = [
         price: 100,
         images: [{url: "https://picsum.photos/500/500?random=13"}]
     },
-]
+];
 
 const Home = () => {
   return (
