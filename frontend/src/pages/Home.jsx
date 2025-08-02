@@ -26,7 +26,7 @@ const placeholderProducts = [
         _id: 8,
         name: "Product 3",
         price: 100,
-        images: [{url: "https://picsum.photos/500/500?random8"}]
+        images: [{url: "https://picsum.photos/500/500?random=8"}]
     },
 
     {
@@ -54,7 +54,7 @@ const placeholderProducts = [
         _id: 12,
         name: "Product 12",
         price: 100,
-        images: [{url: "https://picsum.photos/500/500?random12"}]
+        images: [{url: "https://picsum.photos/500/500?random=12"}]
     },
 
     {
