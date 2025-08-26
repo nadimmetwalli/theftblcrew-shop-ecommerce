@@ -1,18 +1,20 @@
 import React from 'react';
 import { useState } from 'react';
 import login from "../assets/login.png";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+import { loginUser } from '../redux/slices/authSlice';
+import { useDispatch } from 'react-redux';
 
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
 
         const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("User Login:", {email, password});
+            e.preventDefault();
+            dispatch(loginUser({email, password}));
     }
-
 
 
   return (

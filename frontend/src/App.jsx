@@ -19,11 +19,15 @@ import ProductManagement from './components/Admin/ProductManagement';
 import EditProductPage from './components/Admin/EditProductPage';
 import OrderManagement from './components/Admin/OrderManagement';
 
+import {Provider} from "react-redux";
+import store from "./redux/store";
+
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter
+        future={{v7_startTransition: true, v7_relativeSplatPath: true}}>
       <Toaster position="top-right" />
         <Routes>
           <Route path="/" element={<UserLayout />}>
@@ -47,7 +51,7 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+      </Provider>
   )
 }
 export default App;
